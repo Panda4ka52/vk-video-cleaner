@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "VK Video Cleaner",
+  "version": "1.0",
+  "description": "Скрывает правую панель с рекомендациями в VK Видео",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.vk.com/*", "*://*.vkvideo.ru/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
